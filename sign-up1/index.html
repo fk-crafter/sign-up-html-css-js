@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>sign in form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <form class="container">
+        <h2 class="heading">Inscription</h2>
+        <div class="steps-container">
+            <hr>
+            <hr class="active">
+            <div class="steps"><i class="fa-solid fa-user"></i></div>
+            <div class="steps"><i class="fa-solid fa-envelope"></i></div>
+            <div class="steps"><i class="fa-solid fa-key"></i></div>
+            <div class="steps"><i class="fa-solid fa-trophy"></i></div>
+        </div>
+        
+        <div class="input-slide-contianer">
+            <scroller>
+                <div class="input-slide">
+                <h3>Nom d'utilisateur</h3>
+                <p><i>Le nom d'utilisateur permet de sécurisé votre navigation</i></p>
+                <ul class="rules">
+
+                    <li>Votre nom d'utilisateur ne doit contenir que des lettres, des chiffres, des traits de soulignement ou des traits d'union. </li><li>Aucun espace ni caractère spécial autorisé.</li>
+                    <li>Votre nom d'utilisateur ne doit pas être offensant ni contenir de grossièretés</li>
+                </ul>
+                <input type="text" placeholder="Tapez votre nom d'utilisateur" name="username" class="username">
+                <div class="full-name"><input type="text" placeholder="Prénom" name="firstname">
+                    <input type="text" name="lastname" class="lastname" placeholder="Nom de famille"></div>
+                <button class="button-nex" onclick="NextSlide(1)">Suivant</button>
+            </div>
+            <div class="input-slide user-detail">
+                <h3>Adresse mail</h3>
+                <p><i>Votre courrier numérique</i></p>
+                <ul class="rules">
+                    <li>Veuillez saisir une adresse e-mail valide dans un format "exemple@exemple.com".</li>
+                    <li>Nous accordons une grande importance à votre vie privée et n'utiliserons jamais votre courrier électronique à des fins non autorisées.</li>
+                    <li>Veuillez ne pas utiliser d'e-mails appartenant à quelqu'un d'autre.</li>
+                </ul>
+                <input type="email" name="email" class="email" placeholder="Adresse mail">
+ 
+                
+                <button class="button-nex" onclick="NextSlide(2)">Suivant</button>
+            </div>
+            <div class="input-slide password-slide">
+                <h3>Mot de passe</h3>
+                <p><i>Sécurisez votre compte avec un mot de passe.</i></p>
+                <ul class="rules">
+                    <li>Veuillez inclure un mélange de lettres majuscules et minuscules, de chiffres et de caractères spéciaux.</li>
+                    <li>Évitez d'utiliser des mots de passe courants ou faciles à deviner.</li>
+                    <li>N'utilisez pas d'informations personnelles.</li>
+                </ul>
+                <input type="password" name="password" class="password" placeholder="Mot de passe">
+                <input type="password" name="confirm-password" class="confirm-password" placeholder="Confirmez votre mot de passe">
+                <button class="button-nex" onclick="NextSlide(3)">Suivant</button>
+            </div>
+            <div class="input-slide finish-slide">
+                <h3>Nous avons pris en compte votre inscription</h3>
+                <p><i>Vous avez compléter toute les étapes d'inscription</i></p>
+                <ul class="rules">
+                <li>Avant de soumettre vos informations, veuillez prendre un moment pour vous assurer que tous les détails fournis sont corrects. </li>
+                <li> Nous prenons très au sérieux la confidentialité et la sécurité de nos utilisateurs et il est important que toutes les informations fournies soient exactes et à jour.</li> 
+                <li>Une fois que vous avez confirmé que tout est en ordre, cliquez simplement sur le bouton « Soumettre ».</li>
+                </ul> 
+              
+                <button type="submit" class="button-nex" disabled>Soumettre</button>
+            </div>
+        </scroller> 
+        </div>
+      <button class="GoBack" onclick="GoBack()"><i class="fa-solid fa-arrow-left"></i></button> 
+    </form>
+
+    <script src="./main.js"></script>
+    
+</body>
+</html>
